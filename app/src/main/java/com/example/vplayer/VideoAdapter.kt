@@ -9,7 +9,11 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.example.vplayer.databinding.VideoViewBinding
 
-class VideoAdapter(private val context: Context, private var videoList: ArrayList<Video>):
+class VideoAdapter(
+    private val context: Context,
+    private var videoList: ArrayList<Video>,
+    isFolder: Boolean
+):
     RecyclerView.Adapter<VideoAdapter.MyHolder>() {
     class MyHolder(binding:VideoViewBinding):RecyclerView.ViewHolder(binding.root) {
        val title = binding.videoName
